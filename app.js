@@ -5,3 +5,30 @@ const messages = {
     // To Add more Messages with different sets
 };
 
+function generateRandomIndex(arrLen) {
+    return Math.floor(Math.random() * arrLen);
+}
+
+let arrOfMessages = [];
+
+for(let set in messages) {
+    const idx = generateRandomIndex(messages[set].length);
+    switch(set) {
+        case 'set1':
+            arrOfMessages.push(messages[set][idx]);
+            break;
+        case 'set2':
+            arrOfMessages.push(messages[set][idx]);
+            break;
+        case 'set3':
+            arrOfMessages.push(messages[set][idx]);
+            break;
+        default:
+            console.log('Good Bye!')
+    }
+}
+
+
+let finalMsg = arrOfMessages.join('\n');
+
+console.log(finalMsg);
